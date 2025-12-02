@@ -16,14 +16,28 @@
             gap: 25px;
             letter-spacing: 2px;
         }
+        .banner-menu {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            letter-spacing: 2px;
+        }
         .uppercase{
             text-transform: uppercase;
+        }
+
+        .banner-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('images/image_1.jpg');
+            height: 100vh;
         }
     </style>
 </head>
 <body class="bg-warning">
     
-    <div class="container-fluid">
+    <div class="container-fluid d-none">
         <div class="row">
             <div class="col-12">
                 <nav class="header-menu bg-white"> 
@@ -37,8 +51,27 @@
         </div>
     </div>
 
-    <section>
-        
+    <section class="banner-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner-wrapper">
+                        <nav class="banner-menu bg-info d-none">
+                            <div class="fs-14 py-25 px-12 text-warning uppercase">Home</div>
+                            <div class="fs-14 py-25 px-12 text-secondary uppercase">Portfolio</div>
+                            <div class="fs-14 py-25 px-12 text-secondary uppercase">Resume</div>
+                            <div class="fs-14 py-25 px-12 text-secondary uppercase">About</div>
+                            <div class="fs-14 py-25 px-12 text-secondary uppercase">Contact</div>
+                        </nav>
+                        <div class="banner-text">
+                            <p>Hello, I'm</p>
+                            <p>Charles Anderson</p>
+                            <p>and this is My Rezume</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="js/script.js"></script>
