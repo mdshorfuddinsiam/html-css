@@ -1556,6 +1556,9 @@
 .fs-30{font-size:30px;}
 .fs-40{font-size:40px;}
 
+.fs-50{font-size:50px;}
+.fs-60{font-size:60px;}
+
 /* _______ BORDER ________ */
 .border{border:1px solid #000;}
 .border-0{border:0;}
@@ -1576,3 +1579,10 @@
 .fw-light{font-weight:300;}
 
 
+/* _______ LETTER SPACING ________ */
+.ls-0 { letter-spacing: 0; }
+.ls-1 { letter-spacing: 1px; }
+.ls-2 { letter-spacing: 2px; }
+.ls-3 { letter-spacing: 3px; }
+.ls-4 { letter-spacing: 4px; }
+.ls-5 { letter-spacing: 5px; }

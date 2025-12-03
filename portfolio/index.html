@@ -21,21 +21,36 @@
             justify-content: center;
             gap: 25px;
             letter-spacing: 2px;
+
+            position: absolute;
+            top: 0;
         }
         .uppercase{
             text-transform: uppercase;
         }
 
         .banner-wrapper{
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('images/image_1.jpg');
+            /* background-image: url('images/image_1.jpg'); */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/image_1.jpg');
+            /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(222, 20, 20, 0.6)), url('images/image_1.jpg'); */
             height: 100vh;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .tab-pane {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
         }
     </style>
 </head>
-<body class="bg-warning">
+<body >
     
     <div class="container-fluid d-none">
         <div class="row">
@@ -56,17 +71,84 @@
             <div class="row">
                 <div class="col-12">
                     <div class="banner-wrapper">
-                        <nav class="banner-menu bg-info d-none">
-                            <div class="fs-14 py-25 px-12 text-warning uppercase">Home</div>
-                            <div class="fs-14 py-25 px-12 text-secondary uppercase">Portfolio</div>
-                            <div class="fs-14 py-25 px-12 text-secondary uppercase">Resume</div>
-                            <div class="fs-14 py-25 px-12 text-secondary uppercase">About</div>
-                            <div class="fs-14 py-25 px-12 text-secondary uppercase">Contact</div>
+                        <nav class="banner-menu ">
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Home</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Portfolio</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Resume</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">About</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Contact</div>
                         </nav>
-                        <div class="banner-text">
-                            <p>Hello, I'm</p>
-                            <p>Charles Anderson</p>
-                            <p>and this is My Rezume</p>
+                        <div class="banner-text text-center">
+                            <p class="fs-60 fw-light text-white">Hello, I'm</p>
+                            <p class="fs-60 fw-bolder text-white">Charles Anderson</p>
+                            <p class="fs-18 fw-bold fw-light mt-25 text-muted uppercase ls-2">and this is My Rezume</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-10">
+                    <div class="feature-wrapper py-100">
+                        <div class="feature-title text-center">
+                            <h1>Feature <span>Portfolio</span></h1>
+                        </div>
+                        <div class="feature-slider-wrapper">
+                            <div class="fearture-slider-items">
+                                <!-- <ul>
+                                    <li>All</li>
+                                    <li>Packaging</li>
+                                    <li>Mockup</li>
+                                    <li>Typography</li>
+                                    <li>Photography</li>
+                                </ul> -->
+                                <div class="tab-pane mb-20"> 
+                                    <div class="fs-14 py-25 px-12 text-danger">All</div>
+                                    <div class="fs-14 py-25 px-12 text-mute">Packaging</div>
+                                    <div class="fs-14 py-25 px-12 text-mute">Mockup</div>
+                                    <div class="fs-14 py-25 px-12 text-mute">Typography</div>
+                                    <div class="fs-14 py-25 px-12 text-mute">Photography</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="item-box">
+                                        <div class="feature-image">
+                                            <img src="images/p1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="item-text">
+                                            <p>Square Box Mockup</p>
+                                            <p>Mockup</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="item-box">
+                                        <div class="feature-image">
+                                            <img src="images/p1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="item-text">
+                                            <p>Square Box Mockup</p>
+                                            <p>Mockup</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="item-box">
+                                        <div class="feature-image">
+                                            <img src="images/p1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="item-text">
+                                            <p>Square Box Mockup</p>
+                                            <p>Mockup</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

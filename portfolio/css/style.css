@@ -39,9 +39,18 @@
     display: block;
 }
 
+.row{
+    display: flex;
+    justify-content: center;
+}
+
 .d-flex {
     display: flex !important;
 }
 .d-none {
     display: none !important;
+}
+
+.text-center{
+    text-align: center;
 }
