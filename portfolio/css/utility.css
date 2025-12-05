@@ -1543,7 +1543,9 @@
 .bg-warning{background:#ffc107;}
 .bg-info{background:#17a2b8;}
 .bg-light{background:#f8f9fa;}
-.bg-dark{background:#343a40;}
+/* .bg-dark{background:#343a40;} */
+/* .bg-dark{background:#000;} */
+.bg-dark{background:#222;}
 
 /* _______ FONT SIZE ________ */
 .fs-10{font-size:10px;}
@@ -1586,3 +1588,63 @@
 .ls-3 { letter-spacing: 3px; }
 .ls-4 { letter-spacing: 4px; }
 .ls-5 { letter-spacing: 5px; }
+
+
+/* -----------  ----------- */
+.jc-start{
+    justify-content: flex-start;
+}
+.jc-end{
+    justify-content: flex-end;
+}
+.jc-center{
+    justify-content: center;
+}
+.jc-between{
+    justify-content: space-between;
+}
+.jc-around{
+    justify-content: space-around;
+}
+.jc-evenly{
+    justify-content: space-evenly;
+}
+
+/* -----------  ----------- */
+.ai-start{
+    align-items: flex-start;
+}
+.ai-end{
+    align-items: flex-end;
+}
+.ai-center{
+    align-items: center;
+}
+.ai-baseline{
+    align-items: baseline;
+}
+.ai-stretch{
+    align-items: stretch;
+}
+
+/* Bootstrap style line-height utilities */
+
+.lh-1 {
+    line-height: 1 !important;
+}
+
+.lh-sm {
+    line-height: 1.25 !important;
+}
+
+.lh-base {
+    line-height: 1.5 !important;
+}
+
+.lh-lg {
+    line-height: 2 !important;
+}
+
+.lh-xl {
+    line-height: 2.5 !important;
+}
