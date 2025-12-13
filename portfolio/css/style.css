@@ -18,8 +18,41 @@
 .col-12{width: 100%;}
 
 
-[class*='col-']{
+/* [class*='col-']{
     float:left;
+} */
+
+/* .row::after{
+    content: ' ';
+    clear: both;
+    display: block;
+} */
+
+/* .row{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.row {
+  display: flex;          
+  flex-wrap: wrap;        
+  /* margin-right: -15px;    
+  margin-left: -15px;      */
+}
+
+/* .col {
+  position: relative;        
+  width: 100%;               
+  padding-right: 15px;       
+  padding-left: 15px;        
+  min-height: 1px;          
+} */
+
+[class*='col-']{
+    position: relative;        
+    padding-right: 15px;       
+    padding-left: 15px;        
+    min-height: 1px;    
 }
 
 .container{
@@ -31,17 +64,6 @@
 .container-fluid{
     width: 100%;
     height: auto;
-}
-
-.row::after{
-    content: ' ';
-    clear: both;
-    display: block;
-}
-
-.row{
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .d-flex {
@@ -57,5 +79,399 @@
 .text-center{
     text-align: center;
 }
+
+
+/* ================== Custom Css =================== */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    letter-spacing: 2px;
+}
+
+
+.feature-wrapper, 
+.resume-wrapper, 
+.testimonial-wrapper,
+.service-wrapper,
+.blog-wrapper,
+.contact-wrapper,
+.footer-wrapper
+{
+    padding: 80px 0;
+}
+.header-title{
+    text-align: center;
+    color: white;
+}
+
+/* ---------- BANNER ----------- */
+.banner-menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    letter-spacing: 2px;
+
+    position: absolute;
+    top: 0;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+.banner-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('images/image_1.jpg'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/image_1.jpg');
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(222, 20, 20, 0.6)), url('images/image_1.jpg'); */
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-menu-item{
+    padding: 40px 12px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
+.banner-text{
+    text-align: center;
+}
+.banner-text-title{
+    font-size: 60px;
+    font-weight: 300;
+    color: white;
+}
+.banner-text-name{
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+}
+.banner-text-subtitle{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+/* ------------------------------------ */
+
+/* ------------ feature section ------------- */
+.fearture-menu-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    /* margin-bottom: 20px; */
+}
+
+.feature-image img{
+    width: 100%;
+    height: 350px;
+}
+.fearture-menu-item{
+    font-size: 14px;
+    padding: 25px 12px 50px 12px;
+}
+.fearture-menu-item:hover{
+    color: #28a745;
+}
+.item-title{
+    font-size: 20px;
+    padding: 20px 0 10px 0;
+    color: white;
+}
+.item-subtitle{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+/* ------------------------------------ */
+
+/* --------------- resume section -------------- */
+.resume-item{
+    background: #333;
+    padding: 35px;
+}
+
+.hire-me-btn {
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 16px;
+    background: #bac964;
+}
+.download-cv-btn {
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 16px;
+    background: #545b62;
+}
+.resume-sub-title{
+    padding: 50px 0;
+    color: white;
+}
+.resume-item{
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+.resume-item-date{
+    font-size: 14px;
+    margin-bottom: 14px;
+    color: white;
+}
+.resume-item-position{
+    margin-bottom: 12px;
+    color: #28a745;
+    font-weight: 300;
+}
+.resume-item-description{
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 2;
+}
+.resume-item-reference{
+    color: rgba(255, 255, 255, 0.2);
+}
+/* ------------------------------------ */
+
+/* ------------- ABOUT ME ---------------- */
+.about-image-wrapper{
+    display: block;
+    padding: 20px;
+}   
+.about-content-wrapper{
+    padding: 60px 0 0 60px;
+}
+.about-title{
+    padding-bottom: 30px;
+    color: white;
+}
+.about-item-description-one{
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 2;
+    margin-bottom: 16px;
+}
+.about-item-description-two{
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.about-buttons{
+    display: flex;
+    gap: 5px;
+}
+/* ------------------------------------ */
+
+/* ------------ TESTIMONIAL ----------------- */
+.testimonial-item{
+    background: #333;
+    padding: 35px;
+}
+.testimonial-header-title{
+    padding: 100px 0 80px 0;
+}
+
+.testimonial-content-wrapper{
+    padding: 0 15px;
+}
+.testimonial-image-wrapper{
+    display: block;
+    padding-right: 10px;
+}
+.testimonial-item{
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+.testimonial-quote{
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 1.6;
+}
+.testimonial-designation{
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic;
+}
+
+
+/* ----------- Service ----------- */
+.service-item{
+    background: #333;
+    padding: 35px;
+}
+.service-icon-circle {
+    display: flex;
+    justify-content: center;
+}
+.service-icon-wrapper {
+    position: relative;
+    background: #bac964;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.service-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    margin-bottom: 24px;
+    color: white;
+}
+.service-icon i{
+    color: black;
+    font-size: 50px;
+}
+.card{
+    margin-top: 80px;
+    margin-bottom: 25px;
+    padding: 35px;
+    text-align: center;
+    background: #333;
+}
+.service-item-title{
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.service-item-description{
+    margin-bottom: 25px;
+    color: rgb(255, 255, 255, 0.3);
+    line-height: 1.3;
+    font-size: 16px;
+}
+/* ------------------------------------ */
+
+/* ----------- Blog ----------- */
+.blog-item{
+    background: #333;
+}
+.blog-item img{
+    width: 100%;
+    height: 300px;
+}
+.blog-content-wrapper{
+            margin-top: 80px;
+}
+.blog-item-inner{
+    padding: 30px;
+}
+.blog-item-title {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+.blog-item-description {
+    color: rgb(255, 255, 255, 0.3);
+    margin-bottom: 25px;
+    line-height: 2;
+}
+.blog-item-date {
+    color: rgb(255, 255, 255, 0.3);
+}
+/* ------------------------------------ */
+
+/* ----------- contact ----------- */
+.form-group input{
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+.form-group textarea{
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+.contact-submit-btn {
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    padding: 16px 20px;
+    background: #bac964;
+}
+.details-wrapper {
+    margin-bottom: 20px;
+}
+.details-title {
+    margin-bottom: 10px;
+}
+.details-content {
+    margin-bottom: 5px;
+}
+.contact-content-wrapper{
+    margin-top: 80px;
+}
+.contact-sub-title{
+    padding-bottom: 50px;
+    color: white;
+}
+.contact-item{
+    margin-bottom: 25px;
+}
+.contact-details-wrapper{
+    margin-bottom: 25px;
+}
+.contact-content-wrapper-two{
+    padding-left: 32px;
+}
+/* ------------------------------------ */
+
+
+/* -------------- FOOTER ------------- */
+.social-icon-circle {
+    display: flex;
+    justify-content: center;
+}
+.social-icon-main-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icon-wrapper {
+    position: relative;
+    background: #333;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+.social-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.social-icon i {
+    color: #bac964;
+    font-size: 25px;
+}
+.footer-content-wrapper{
+    margin-top: 50px;
+}
+/* ------------------------------------ */
 
 

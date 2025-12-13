@@ -12,10 +12,189 @@
     <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="css/utility.css" >
     <style>
-       
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header-menu {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            letter-spacing: 2px;
+        }
+        .banner-menu {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            letter-spacing: 2px;
+
+            position: absolute;
+            top: 0;
+        }
+        .uppercase{
+            text-transform: uppercase;
+        }
+
+        .banner-wrapper{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-image: url('images/image_1.jpg'); */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/image_1.jpg');
+            /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(222, 20, 20, 0.6)), url('images/image_1.jpg'); */
+            height: 100vh;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .tab-pane {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .feature-image img{
+            width: 100%;
+            height: 350px;
+        }
+
+        .resume-item{
+            background: #333;
+            padding: 35px;
+        }
+
+        .hire-me-btn {
+            text-decoration: none;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 16px;
+            background: #bac964;
+        }
+        .download-cv-btn {
+            text-decoration: none;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 16px;
+            background: #545b62;
+        }
+
+        .testimonial-item{
+            background: #333;
+            padding: 35px;
+        }
+
+
+        /* ----------- Service ----------- */
+        .service-item{
+            background: #333;
+            padding: 35px;
+        }
+        .service-icon-circle {
+            display: flex;
+            justify-content: center;
+        }
+        .service-icon-wrapper {
+            position: relative;
+            background: #bac964;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+        }
+        .service-icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .service-icon i{
+            color: black;
+            font-size: 50px;
+        }
+
+        /* ----------- Blog ----------- */
+        .blog-item{
+            background: #333;
+        }
+        .blog-item img{
+            width: 100%;
+            height: 300px;
+        }
+
+        /* ----------- contact ----------- */
+        .form-group input{
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .form-group textarea{
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            border: none;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .contact-submit-btn {
+            text-decoration: none;
+            color: white;
+            border-radius: 25px;
+            padding: 16px 20px;
+            background: #bac964;
+        }
+
+
+
+        .details-wrapper {
+            margin-bottom: 20px;
+        }
+        .details-title {
+            margin-bottom: 10px;
+        }
+        .details-content {
+            margin-bottom: 5px;
+        }
+
+
+
+        .social-icon-circle {
+            display: flex;
+            justify-content: center;
+        }
+        .social-icon-main-wrapper{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icon-wrapper {
+            position: relative;
+            background: #333;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 30px;
+        }
+        .social-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .social-icon i {
+            color: #bac964;
+            font-size: 25px;
+        }
     </style>
 </head>
-<body class="bg-dark">
+<body >
     
     <div class="container-fluid d-none">
         <div class="row">
@@ -31,23 +210,22 @@
         </div>
     </div>
 
-    <!-- BANNER -->
     <section class="banner-section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 p-0">
+                <div class="col-12">
                     <div class="banner-wrapper">
                         <nav class="banner-menu ">
-                            <div class="banner-menu-item">Home</div>
-                            <div class="banner-menu-item">Portfolio</div>
-                            <div class="banner-menu-item">Resume</div>
-                            <div class="banner-menu-item">About</div>
-                            <div class="banner-menu-item">Contact</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Home</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Portfolio</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Resume</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">About</div>
+                            <div class="fs-14 py-40 px-12 text-white uppercase">Contact</div>
                         </nav>
-                        <div class="banner-text">
-                            <p class="banner-text-title">Hello, I'm</p>
-                            <p class="banner-text-name">Charles Anderson</p>
-                            <p class="banner-text-subtitle">and this is My Rezume</p>
+                        <div class="banner-text text-center">
+                            <p class="fs-60 fw-light text-white">Hello, I'm</p>
+                            <p class="fs-60 fw-bolder text-white">Charles Anderson</p>
+                            <p class="fs-18 fw-bold fw-light mt-25 text-muted uppercase ls-2">and this is My Rezume</p>
                         </div>
                     </div>
                 </div>
@@ -55,94 +233,95 @@
         </div>
     </section>
 
-    <!-- FEATURE -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center">
+        <div class="container-fluid bg-dark">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="feature-wrapper">
-                        <div class="header-title pb-4">
+                    <div class="feature-wrapper py-100">
+                        <div class="feature-title text-center text-white pb-40">
                             <h1 class="fw-light">Feature <span class="fw-bold">Portfolio</span></h1>
                         </div>
-                        <div class="feature-content-wrapper">
-                            <!-- <ul>
-                                <li>All</li>
-                                <li>Packaging</li>
-                                <li>Mockup</li>
-                                <li>Typography</li>
-                                <li>Photography</li>
-                            </ul> -->
-                            <div class="fearture-menu-wrapper"> 
-                                <div class="fearture-menu-item text-success">All</div>
-                                <div class="fearture-menu-item text-muted">Packaging</div>
-                                <div class="fearture-menu-item text-muted">Mockup</div>
-                                <div class="fearture-menu-item text-muted">Typography</div>
-                                <div class="fearture-menu-item text-muted">Photography</div>
+                        <div class="feature-slider-wrapper">
+                            <div class="fearture-slider-items">
+                                <!-- <ul>
+                                    <li>All</li>
+                                    <li>Packaging</li>
+                                    <li>Mockup</li>
+                                    <li>Typography</li>
+                                    <li>Photography</li>
+                                </ul> -->
+                                <div class="tab-pane mb-20"> 
+                                    <div class="fs-14 py-25 px-12 text-danger">All</div>
+                                    <div class="fs-14 py-25 px-12 text-muted">Packaging</div>
+                                    <div class="fs-14 py-25 px-12 text-muted">Mockup</div>
+                                    <div class="fs-14 py-25 px-12 text-muted">Typography</div>
+                                    <div class="fs-14 py-25 px-12 text-muted">Photography</div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="item-box pb-4">
+                                    <div class="item-box px-15 pb-16">
                                         <div class="feature-image">
                                             <img src="images/p1.jpg" alt="" srcset="">
                                         </div>
-                                        <div class="item-text-wrapper text-center">
-                                            <p class="item-title">Square Box Mockup</p>
-                                            <p class="item-subtitle">Mockup</p>
+                                        <div class="item-text p-25 text-center">
+                                            <p class="fs-20 fw-light mb-10 text-white">Square Box Mockup</p>
+                                            <p class="fs-14 fw-light text-muted uppercase">Mockup</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="item-box pb-4">
+                                    <div class="item-box px-15 pb-16">
                                         <div class="feature-image">
                                             <img src="images/p2.jpg" alt="" srcset="">
                                         </div>
                                         <div class="item-text p-25 text-center">
-                                            <p class="item-title">Lead Product Designer</p>
-                                            <p class="item-subtitle">Mockup</p>
+                                            <p class="fs-20 fw-light mb-10 text-white">Lead Product Designer</p>
+                                            <p class="fs-14 fw-light text-muted uppercase">Mockup</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="item-box pb-4">
+                                    <div class="item-box px-15 pb-16">
                                         <div class="feature-image">
                                             <img src="images/p3.jpg" alt="" srcset="">
                                         </div>
                                         <div class="item-text p-25 text-center">
-                                            <p class="item-title">Creative Package Design</p>
-                                            <p class="item-subtitle">Packaging</p>
+                                            <p class="fs-20 fw-light mb-10 text-white">Creative Package Design</p>
+                                            <p class="fs-14 fw-light text-muted uppercase">Packaging</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="item-box pb-4">
+                                    <div class="item-box px-15 pb-16">
                                         <div class="feature-image">
                                             <img src="images/p4.jpg" alt="" srcset="">
                                         </div>
                                         <div class="item-text p-25 text-center">
-                                            <p class="item-title">Packaging Brand</p>
-                                            <p class="item-subtitle">Packaging</p>
+                                            <p class="fs-20 fw-light mb-10 text-white">Packaging Brand</p>
+                                            <p class="fs-14 fw-light text-muted uppercase">Packaging</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="item-box pb-4">
+                                    <div class="item-box px-15 pb-16">
                                         <div class="feature-image">
                                             <img src="images/p5.jpg" alt="" srcset="">
                                         </div>
                                         <div class="item-text p-25 text-center">
-                                            <p class="item-title">Isometric 3D Extrusion</p>
-                                            <p class="item-subtitle">Typography</p>
+                                            <p class="fs-20 fw-light mb-10 text-white">Isometric 3D Extrusion</p>
+                                            <p class="fs-14 fw-light text-muted uppercase">Typography</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="item-box pb-4">
+                                    <div class="item-box px-15 pb-16">
                                         <div class="feature-image">
                                             <img src="images/p6.jpg" alt="" srcset="">
                                         </div>
                                         <div class="item-text p-25 text-center">
-                                            <p class="item-title">White Space Photography</p>
-                                            <p class="item-subtitle">photography</p>
+                                            <p class="fs-20 fw-light mb-10 text-white">White Space Photography</p>
+                                            <p class="fs-14 fw-light text-muted uppercase">photography</p>
                                         </div>
                                     </div>
                                 </div>
@@ -156,89 +335,89 @@
 
     <!-- RESUME -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center">
+        <div class="container-fluid bg-dark">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="resume-wrapper py-100">
-                        <div class="header-title pb-80">
+                    <div class="feature-wrapper py-100">
+                        <div class="feature-title text-center text-white pb-80">
                             <h1 class="fw-light">My <span class="fw-bold">Resume</span></h1>
                         </div>
-                        <div class="resume-content-wrapper">
+                        <div class="feature-slider-wrapper">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="education-wrapper px-15">
-                                        <div class="resume-sub-title">
+                                        <div class="pb-50 resume-sub-title text-white">
                                             <h2 class="fw-light">Education</h2>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
-                                                <h3 class="resume-item-position">Masteral in Information Technology</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">New York University</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Masteral in Information Technology</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">New York University</p>
                                             </div>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present Deacember.</p>
-                                                <h3 class="resume-item-position">Masteral in Information Technology</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">New York University</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present Deacember.</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Masteral in Information Technology</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">New York University</p>
                                             </div>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
-                                                <h3 class="resume-item-position">Masteral in Information Technology</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">New York University</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Masteral in Information Technology</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">New York University</p>
                                             </div>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present Deacember.</p>
-                                                <h3 class="resume-item-position">Masteral in Information Technology</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">New York University</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present Deacember.</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Masteral in Information Technology</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">New York University</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="experience-wrapper px-15">
-                                        <div class="resume-sub-title">
+                                        <div class="pb-50 resume-sub-title text-white">
                                             <h2 class="fw-light">Experience</h2>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
-                                                <h3 class="resume-item-position">Lead Product Designer</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">Github</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Lead Product Designer</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">Github</p>
                                             </div>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
-                                                <h3 class="resume-item-position">Lead Product Designer</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">Facebook</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Lead Product Designer</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">Facebook</p>
                                             </div>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
-                                                <h3 class="resume-item-position">Lead Product Designer</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">Twitter</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Lead Product Designer</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">Twitter</p>
                                             </div>
                                         </div>
-                                        <div class="resume-item">
+                                        <div class="mb-25 px-15 resume-item rounded">
                                             <div class="resume-item-inner">
-                                                <p class="resume-item-date"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
-                                                <h3 class="resume-item-position">Lead Product Designer</h3>
-                                                <p class="resume-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="resume-item-reference">Shopify</p>
+                                                <p class="fs-14 mb-24 resume-item-date text-white"><i class="fa-regular fa-calendar"></i> March 2013 - Present</p>
+                                                <h3 class="mb-12 resume-item-position text-danger">Lead Product Designer</h3>
+                                                <p class="mb-25 resume-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="resume-item-reference text-muted">Shopify</p>
                                             </div>
                                         </div>
                                     </div>
@@ -254,23 +433,23 @@
     <!-- ABOUT ME -->
     <section>
         <div class="container-fluid bg-dark">
-            <div class="row justify-content-center">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="about-wrapper">
+                    <div class="about-slider-wrapper">
                         <div class="row">
                             <div class="col-7">
-                                <div class="about-image-wrapper">
+                                <div class="about-image px-15 pb-16 d-block">
                                     <img src="images/image_1.jpg" alt="" width="100%" srcset="">
                                 </div>
                             </div>
                             <div class="col-5">
-                                <div class="about-content-wrapper">
-                                    <div class="about-title">
+                                <div class="about-content-wrapper pl-100 pt-50">
+                                    <div class="feature-title text-white pb-30">
                                         <h1 class="fw-light">About <span class="fw-bold">Me</span></h1>
                                     </div>
-                                    <p class="about-item-description-one">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                    <p class="about-item-description-two">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                                    <div class="about-buttons ">
+                                    <p class="lh-lg mb-15 resume-item-position text-muted">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                    <p class="fs-14 lh-lg mb-25 resume-item-description text-muted">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                                    <div class="about-buttons pt-30">
                                         <a href="javascript:void(0)" class="hire-me-btn uppercase">Hire Me</a>
                                         <a href="javascript:void(0)" class="download-cv-btn uppercase">Download Cv</a>
                                     </div>
@@ -286,32 +465,32 @@
     <!-- TESTIMONIAL -->
     <section>
         <div class="container-fluid bg-dark">
-            <div class="row justify-content-center">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="testimonial-wrapper">
-                        <div class="header-title testimonial-header-title">
+                    <div class="testimonial-wrapper py-100">
+                        <div class="testimonial-title text-center text-white pb-80">
                             <h1 class="fw-light">Client <span class="fw-bold">Testimonial</span></h1>
                         </div>
                         <div class="testimonial-slider-wrapper">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="testimonial-content-wrapper">
+                                    <div class="testimonial-content-wrapper px-10">
                                         <div class="row">
                                             <div class="col-2">
-                                                <div class="testimonial-image-wrapper">
+                                                <div class="about-image d-block pr-40">
                                                     <img src="images/person_1.jpg" class="rounded-circle" alt="" width="100%" srcset="">
                                                 </div>
                                             </div>
                                             <div class="col-10">
-                                                <div class="testimonial-item">
+                                                <div class="testimonial-item rounded mb-25 px-15 ">
                                                     <div class="testimonial-item-inner">
                                                         <figure>
-                                                            <blockquote class="testimonial-quote">
+                                                            <blockquote class="lh-base mb-25 text-white">
                                                                 <p>
                                                                     “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
                                                                 </p>
                                                             </blockquote>
-                                                            <figcaption class="testimonial-designation">— Ethan McCown, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
+                                                            <figcaption class="text-success">— Ethan McCown, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -323,20 +502,20 @@
                                     <div class="testimonial-content-wrapper px-10">
                                         <div class="row">
                                             <div class="col-2">
-                                                <div class="testimonial-image-wrapper">
+                                                <div class="about-image d-block pr-40">
                                                     <img src="images/person_2.jpg" class="rounded-circle" alt="" width="100%" srcset="">
                                                 </div>
                                             </div>
                                             <div class="col-10">
-                                                <div class="testimonial-item">
+                                                <div class="testimonial-item rounded mb-25 px-15 ">
                                                     <div class="testimonial-item-inner">
                                                         <figure>
-                                                            <blockquote class="testimonial-quote">
+                                                            <blockquote class="lh-base mb-25 text-white">
                                                                 <p>
                                                                     “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
                                                                 </p>
                                                             </blockquote>
-                                                            <figcaption class="testimonial-designation">— Craig Gowen, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
+                                                            <figcaption class="text-success">— Craig Gowen, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -348,20 +527,20 @@
                                     <div class="testimonial-content-wrapper px-10">
                                         <div class="row">
                                             <div class="col-2">
-                                                <div class="testimonial-image-wrapper">
+                                                <div class="about-image d-block pr-40">
                                                     <img src="images/person_3.jpg" class="rounded-circle" alt="" width="100%" srcset="">
                                                 </div>
                                             </div>
                                             <div class="col-10">
-                                                <div class="testimonial-item">
+                                                <div class="testimonial-item rounded mb-25 px-15 ">
                                                     <div class="testimonial-item-inner">
                                                         <figure>
-                                                            <blockquote class="testimonial-quote">
+                                                            <blockquote class="lh-base mb-25 text-white">
                                                                 <p>
                                                                     “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
                                                                 </p>
                                                             </blockquote>
-                                                            <figcaption class="testimonial-designation">— Ethan McCown, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
+                                                            <figcaption class="text-success">— Ethan McCown, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -373,20 +552,20 @@
                                     <div class="testimonial-content-wrapper px-10">
                                         <div class="row">
                                             <div class="col-2">
-                                                <div class="testimonial-image-wrapper">
+                                                <div class="about-image d-block pr-40">
                                                     <img src="images/person_4.jpg" class="rounded-circle" alt="" width="100%" srcset="">
                                                 </div>
                                             </div>
                                             <div class="col-10">
-                                                <div class="testimonial-item">
+                                                <div class="testimonial-item rounded mb-25 px-15 ">
                                                     <div class="testimonial-item-inner">
                                                         <figure>
-                                                            <blockquote class="testimonial-quote">
+                                                            <blockquote class="lh-base mb-25 text-white">
                                                                 <p>
                                                                     “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
                                                                 </p>
                                                             </blockquote>
-                                                            <figcaption class="testimonial-designation">— Craig Gowen, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
+                                                            <figcaption class="text-success">— Craig Gowen, CEO <cite class="text-warning">XYZ Inc.</cite></figcaption>
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -405,27 +584,29 @@
     <!-- SERVICE -->
     <section>
         <div class="container-fluid bg-dark">
-            <div class="row justify-content-center">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="service-wrapper">
-                        <div class="header-title">
+                    <div class="feature-wrapper py-100">
+                        <div class="feature-title text-center text-white pb-80">
                             <h1 class="fw-light">My <span class="fw-bold">Services</span></h1>
                         </div>
-                        <div class="service-slider-wrapper">
+                        <div class="feature-slider-wrapper">
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="service-icon-circle">
-                                                <div class="service-icon-wrapper">
-                                                    <p class="service-icon">
-                                                        <i class="fa-brands fa-square-web-awesome-stroke"></i>
-                                                    </p>
+                                    <div class="service-wrapper px-15 text-center">
+                                        <div class="mb-25 px-15 service-item rounded">
+                                            <div class="service-item-inner">
+                                                <div class="service-icon-circle">
+                                                    <div class="service-icon-wrapper">
+                                                        <p class="service-icon fs-14 mb-24 text-white">
+                                                            <i class="fa-brands fa-square-web-awesome-stroke"></i>
+                                                        </p>
+                                                    </div>
                                                 </div>
+                                                <h3 class="service-item-title mb-20 text-white fw-light">Web Design</h3>
+                                                <p class="service-item-description mb-25 text-muted lh-lg">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                                <p class="learn-more text-warning">Learn More <span>&nbsp;&gt;</span></p>
                                             </div>
-                                            <h3 class="service-item-title">Web Design</h3>
-                                            <p class="service-item-description mb-25 text-muted lh-lg">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                            <p class="learn-more text-warning">Learn More <span>&nbsp;&gt;</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -440,7 +621,7 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <h3 class="service-item-title">Search Engine Optimization</h3>
+                                                <h3 class="service-item-title mb-20 text-white fw-light">Search Engine Optimization</h3>
                                                 <p class="mb-25 service-item-description text-muted lh-lg">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                                                  <p class="learn-more text-warning">Learn More <span>&nbsp;&gt;</span></p>
                                             </div>
@@ -458,7 +639,7 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <h3 class="service-item-title">Video Editing</h3>
+                                                <h3 class="service-item-title mb-20 text-white fw-light">Video Editing</h3>
                                                 <p class="mb-25 service-item-description text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
                                                 <p class="learn-more text-warning">Learn More <span>&nbsp;&gt;</span></p>
                                             </div>
@@ -476,24 +657,24 @@
     <!-- BLOG ON MEDIUM -->
     <section>
         <div class="container-fluid bg-dark">
-            <div class="row justify-content-center">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="blog-wrapper">
-                        <div class="header-title">
+                    <div class="feature-wrapper py-100">
+                        <div class="feature-title text-center text-white pb-80">
                             <h1 class="fw-light">Blog on <span class="fw-bold">Medium</span></h1>
                         </div>
-                        <div class="blog-content-wrapper">
+                        <div class="feature-slider-wrapper">
                             <div class="row">
                                 <div class="col-4">
-                                    <div class="blog-item-wrapper">
+                                    <div class="px-15 blog-wrapper">
                                         <div class="blog-item rounded" >
                                             <div class="thumbnail-image" >
                                                 <img src="images/post_1.jpg" alt="">
                                             </div>
-                                            <div class="blog-item-inner">
-                                                <h3 class="blog-item-title">Creative Product Designer From Facebook</h3>
-                                                <p class="blog-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="blog-item-date">
+                                            <div class="blog-item-inner p-30">
+                                                <h3 class="fw-light lh-base mb-20 blog-item-title text-white">Creative Product Designer From Facebook</h3>
+                                                <p class="blog-item-description mb-25 text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="learn-more text-muted">
                                                     <i class="fa-regular fa-calendar"></i> Aug 7, 2018 
                                                     <i class="fa-solid fa-comment"></i> 5 Comments
                                                 </p>
@@ -502,15 +683,15 @@
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="blog-item-wrapper">
+                                    <div class="px-15 blog-wrapper">
                                         <div class="blog-item rounded" >
                                             <div class="thumbnail-image" >
                                                 <img src="images/post_2.jpg" alt="">
                                             </div>
-                                            <div class="blog-item-inner">
-                                                <h3 class="blog-item-title fw-light lh-base mb-20 text-white">Creative Product Designer From Facebook</h3>
-                                                <p class="blog-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="blog-item-date">
+                                            <div class="blog-item-inner p-30">
+                                                <h3 class="fw-light lh-base mb-20 blog-item-title text-white">Creative Product Designer From Facebook</h3>
+                                                <p class="blog-item-description mb-25 text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="learn-more text-muted">
                                                     <i class="fa-regular fa-calendar"></i> Aug 7, 2018 
                                                     <i class="fa-solid fa-comment"></i> 5 Comments
                                                 </p>
@@ -519,15 +700,15 @@
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="blog-item-wrapper">
+                                    <div class="px-15 blog-wrapper">
                                         <div class="blog-item rounded" >
                                             <div class="thumbnail-image" >
                                                 <img src="images/post_3.jpg" alt="">
                                             </div>
-                                            <div class="blog-item-inner">
+                                            <div class="blog-item-inner p-30">
                                                 <h3 class="fw-light lh-base mb-20 blog-item-title text-white">Creative Product Designer From Facebook</h3>
-                                                <p class="blog-item-description">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                                                <p class="blog-item-date">
+                                                <p class="blog-item-description mb-25 text-muted lh-lg">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                                <p class="learn-more text-muted">
                                                     <i class="fa-regular fa-calendar"></i> Aug 7, 2018 
                                                     <i class="fa-solid fa-comment"></i> 5 Comments
                                                 </p>
@@ -546,20 +727,20 @@
     <!-- CONTACT -->
     <section>
         <div class="container-fluid bg-dark">
-            <div class="row justify-content-center">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="contact-wrapper">
-                        <div class="header-title">
+                    <div class="feature-wrapper py-100">
+                        <div class="feature-title text-center text-white pb-80">
                             <h1 class="fw-light">Get <span class="fw-bold">In Touch</span></h1>
                         </div>
-                        <div class="contact-content-wrapper">
+                        <div class="feature-slider-wrapper">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="contact-content-wrapper-one">
-                                        <div class="contact-sub-title">
+                                    <div class="education-wrapper px-15">
+                                        <div class="pb-50 contact-sub-title text-white">
                                             <h2 class="fw-light">Get In Touch</h2>
                                         </div>
-                                        <div class="contact-item rounded">
+                                        <div class="mb-25 contact-item rounded">
                                             <form action="javascript:void(0)" >
                                                 <div class="form-group">
                                                     <input type="text" placeholder="Your Name">
@@ -581,11 +762,11 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="contact-content-wrapper-two">
-                                        <div class="contact-sub-title">
+                                    <div class="experience-wrapper px-15">
+                                        <div class="pb-50 contact-details-sub-title text-white">
                                             <h2 class="fw-light">My Contact Details</h2>
                                         </div>
-                                        <div class="contact-details-wrapper rounded">
+                                        <div class="mb-25 contact-details-wrapper rounded">
                                             <div class="details-wrapper">
                                                 <p class="details-title text-success">Email</p>
                                                 <p class="details-content text-muted">site@gmail.com</p>
@@ -618,13 +799,13 @@
     <!-- FOOTER -->
     <section>
         <div class="container-fluid bg-dark">
-            <div class="row justify-content-center">
+            <div class="row jc-center">
                 <div class="col-9">
-                    <div class="footer-wrapper">
-                        <div class="header-title">
-                            <p class="fw-light text-muted">Copyright &copy; 2025 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="javascript:void(0)" class="text-warning text-decoration-none">Colorlib</a></p>
+                    <div class="feature-wrapper">
+                        <div class="feature-title text-center text-muted pb-50">
+                            <p class="fw-light">Copyright &copy; 2025 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="javascript:void(0)" class="text-warning text-decoration-none">Colorlib</a></p>
                         </div>
-                        <div class="footer-content-wrapper">
+                        <div class="feature-slider-wrapper">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="social-icon-main-wrapper">
