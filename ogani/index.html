@@ -18,8 +18,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- SLICK (SLIDER) -->
     <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="plugins/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owlcarousel/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
@@ -243,14 +248,162 @@
         display: inline-block;
         margin-bottom: 10px;
     }
+
     .nav-link.active {
         color: black;
     }
+
+
     .banner-bottom-image{
       display: block;
     }
     .banner-bottom-image img{
       width: 100%;
+    }
+
+    .bottom-slider{
+      margin: 100px 0;
+    }
+    .slider-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .custom-owl-nav {
+        display: flex;
+        gap: 10px;
+    }
+    .owl-prev {
+        border: 1px solid black;
+        padding: 7px 14px;
+        border-radius: 5px;
+        background: #ddd;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .owl-next {
+        border: 1px solid black;
+        padding: 7px 14px;
+        border-radius: 5px;
+        background: #ddd;
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 16px;
+    }
+    .product-vertical-item{
+      display: flex;
+      margin-bottom: 16px;
+    }
+    .product-vertical-image{
+      display: block;
+      width: 25%;
+      margin-right: 1rem;
+    }
+    .product-vertical-image img{
+      width: 100%;
+      height: auto;
+    }
+    .product-vertical-content{
+      padding: 10px;
+    }
+    .product-vertical-title{
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .blog-item {
+        padding: 0.25rem;
+    }
+    .blog-image {
+        display: block;
+    }
+    .blog-image img{
+        width: 100%;
+    }
+    .blog-content {
+        padding: 32px 0;
+    }
+    .blog-date-comment {
+        padding-bottom: 16px;
+        color: lightgray;
+    }
+    .blog-date-comment span{
+        margin-right: 16px;
+    }
+    .blog-title {
+        padding-bottom: 6px;
+        font-weight: bold;
+    }
+
+    section.footer {
+        background: #F3F6FA;
+        padding: 100px 0;
+    }
+    .footer-logo {
+        margin-bottom: 16px;
+    }
+    .footer-info {
+        line-height: 1;
+    }
+    .footer-middle h6{
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+    .footer-links {
+        display: flex;
+        gap: 25%;
+    }
+    .footer-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    /* .footer-links ul li{} */
+    .footer-links ul li a{
+        text-decoration: none;
+        color: black;
+        line-height: 2;
+    }
+    .footer-right h6{
+      margin-bottom: 1rem;
+    }
+    .footer-right p{
+      margin-bottom: 32px;
+    }
+    .subscriber-form{
+      margin-bottom: 2rem;
+    }
+    .subscriber-form input{
+        padding: 10px 16px;
+        width: 68%;
+        border: none;
+        color: black;
+    }
+    .subscriber-form button{
+        padding: 10px;
+        width: 30%;
+        border: none;
+        background: red;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .footer-social ul {
+        list-style: none;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+    }
+    li.social-item {
+        background: white;
+        padding: 10px 12px;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 75px;
     }
     </style>
   </head>
@@ -773,7 +926,7 @@
     </section>
 
     <!-- BANNER BOTTOM -->
-     <section class="banner-bottom">
+    <section class="banner-bottom">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -788,7 +941,435 @@
           </div>
         </div>
       </div>
-     </section>
+    </section>
+
+    <!-- BOTTOM SLIDER -->
+    <section class="bottom-slider">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <!--  -->
+            <div class="slider-header">
+              <h3>Latest Products</h3>
+              <div class="custom-owl-nav">
+                  <div class="owl-prev" data-target="#slider1">&lt;</div>
+                  <div class="owl-next" data-target="#slider1">&gt;</div>
+              </div>
+            </div>
+            <div id="slider1" class="owl-carousel">
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-1.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-2.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-3.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-4.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-5.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-6.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-7.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-8.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <!--  -->
+            <div class="slider-header">
+              <h3>Top Rated Products</h3>
+              <div class="custom-owl-nav">
+                  <div class="owl-prev" data-target="#slider2">&lt;</div>
+                  <div class="owl-next" data-target="#slider2">&gt;</div>
+              </div>
+            </div>
+            <div id="slider2" class="owl-carousel">
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-1.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-2.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-3.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-4.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-5.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-6.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-7.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-8.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <!--  -->
+            <div class="slider-header">
+              <h3>Review Products</h3>
+              <div class="custom-owl-nav">
+                  <div class="owl-prev" data-target="#slider3">&lt;</div>
+                  <div class="owl-next" data-target="#slider3">&gt;</div>
+              </div>
+            </div>
+            <div id="slider3" class="owl-carousel">
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-1.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-2.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-3.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-4.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-5.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-6.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-7.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="product-vertical-item">
+                  <div class="product-vertical-image">
+                    <img src="img/featured/feature-8.jpg" alt="">
+                  </div>
+                  <div class="product-vertical-content">
+                    <span class="product-vertical-title">Crab Pool Security</span>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>  
+
+    <!-- BLOG -->
+    <section class="blogs">
+      <div class="container">
+        <div class="row">
+
+          <div class="section-title">
+            <h2>From The Blog</h2>
+          </div>
+
+          <div class="col-md-4">
+            <div class="blog-item">
+              <div class="blog-image">
+                <img src="img/blog/blog-1.jpg" alt="">
+              </div>
+              <div class="blog-content">
+                <div class="blog-date-comment">
+                  <span><i class="fa-regular fa-calendar"></i> May 4,2019 </span>
+                  <span><i class="fa-regular fa-comment"></i> 5</span>
+                </div>
+                <h5 class="blog-title">Cooking tips make cooking simple</h5>
+                <p class="blog-short-description">Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="blog-item">
+              <div class="blog-image">
+                <img src="img/blog/blog-2.jpg" alt="">
+              </div>
+              <div class="blog-content">
+                <div class="blog-date-comment">
+                  <span><i class="fa-regular fa-calendar"></i> May 4,2019 </span>
+                  <span><i class="fa-regular fa-comment"></i> 5</span>
+                </div>
+                <h5 class="blog-title">Cooking tips make cooking simple</h5>
+                <p class="blog-short-description">Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="blog-item">
+              <div class="blog-image">
+                <img src="img/blog/blog-3.jpg" alt="">
+              </div>
+              <div class="blog-content">
+                <div class="blog-date-comment">
+                  <span><i class="fa-regular fa-calendar"></i> May 4,2019 </span>
+                  <span><i class="fa-regular fa-comment"></i> 5</span>
+                </div>
+                <h5 class="blog-title">Cooking tips make cooking simple</h5>
+                <p class="blog-short-description">Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="footer-left">
+              <div class="footer-logo">
+                <img src="img/logo.png" alt="">
+              </div>
+              <div class="footer-info">
+                <p>Address: 60-49 Road 11378 New York </p>
+                <p>Phone: +65 11.188.888</p>
+                <p>Email: hello@colorlib.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-middle">
+              <h6>Useful Links</h6>
+              <div class="footer-links">
+                <ul>
+                  <li><a href="javascript:void(0)">About Us </a></li>
+                  <li><a href="javascript:void(0)">About Our Shop </a></li>
+                  <li><a href="javascript:void(0)">Secure Shopping </a></li>
+                  <li><a href="javascript:void(0)">Delivery infomation </a></li>
+                  <li><a href="javascript:void(0)">Privacy Policy </a></li>
+                  <li><a href="javascript:void(0)">Our Sitemap </a></li>
+                </ul>
+                <ul>
+                  <li><a href="javascript:void(0)">Who We Are </a></li>
+                  <li><a href="javascript:void(0)">Our Services </a></li>
+                  <li><a href="javascript:void(0)">Projects </a></li>
+                  <li><a href="javascript:void(0)">Contact </a></li>
+                  <li><a href="javascript:void(0)">Innovation </a></li>
+                  <li><a href="javascript:void(0)">Testimonials </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-right">
+              <h6>Join Our Newsletter Now</h6>
+              <p>Get E-mail updates about our latest shop and special offers.</p>
+              <form action="javascript:void(0)" class="subscriber-form">
+                <input type="email" placeholder="Enter Your Email">
+                <button>Subscribe</button>
+              </form>
+              <div class="footer-social">
+                <ul>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                  </li>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                  </li>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                  </li>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-pinterest"></i></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="footer-bottom">
+              <div class="footer-text">
+                Copyright &copy;2025 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="javascript:void(0)">Colorlib</a>
+              </div>
+              <div class="footer-payment">
+                <img src="img/payment-item.png" alt="">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>      
+
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -797,10 +1378,14 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <!-- SLICK (SLIDER) -->
     <script src="plugins/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- OWL CAROUSEL -->
+     <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
 
     <script type="text/javascript">
+      // ------- slick (slider) ------
       $(function() {
         $(".regular").slick({
           dots: true,
@@ -810,6 +1395,27 @@
           dots:false,
         });
       });
+
+      // ---------- owl-carousel ----------
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        // nav: true,
+        dots: false,
+        autoplay: true,
+        smartSpeed: 600,
+      });
+      $('.owl-next').on('click', function() {
+          let currentSlider = $(this).data('target');
+          // alert(currentSlider);
+          $(currentSlider).trigger('next.owl.carousel');
+      })
+      $('.owl-prev').on('click', function() {
+          let currentSlider = $(this).data('target');
+          $(currentSlider).trigger('prev.owl.carousel', [300]);
+      })
     </script>
 
   </body>
