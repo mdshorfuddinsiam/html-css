@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ogani | Checkout</title>
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- SLICK (SLIDER) -->
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="plugins/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owlcarousel/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+        .coupon-link{
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid lightgray;
+        }
+        .coupon-link span{
+            color: gray;
+        }
+        .coupon-link span a{
+            color: gray;
+            text-decoration: none;
+        }
+        .coupon-link span i{
+            transform: rotate(90deg);
+        }
+        .billing {
+            margin-top: 3rem;
+        }
+        .billing h4 {
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* ----- form ----- */
+        .checkout-input p{
+          margin-bottom: 24px;
+        }
+        .checkout-input input{
+          width: 100%;
+          border: 1px solid lightgray;
+          border-radius: 4px;
+          height: 46px;
+          padding-left: 20px;
+          font-size: 16px;
+          color: lightgray;
+        }
+        .checkout-input input:focus, .checkout-input input:focus-visible{
+          border-color: 1px solid lightgray;
+          outline: none;
+          box-shadow: none;
+        }
+        /* ----------- */
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER TOP -->
+    <section class="header-top pt-3 text-bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="top-header-left">
+              <p><i class="fa-solid fa-envelope"></i> hello@colorlib.com</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="top-header-center">
+              <p>Free Shipping for all Order of $99</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="top-header-right">
+              <div class="icon-wrapper">
+                <div class="icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="icon">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="icon">
+                  <i class="fa-brands fa-pinterest-p"></i>
+                </div>
+              </div>
+              <div class="language">
+                <img src="img/language.png" alt="" />
+                <span>English</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="login text-end">
+                <i class="fa-solid fa-user"></i>
+                Login
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HEADER MAIN -->
+    <section class="header-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> -->
+                    <nav class="navbar navbar-expand-lg ">
+                        <div class="container-fluid">
+                            <!-- <a class="navbar-brand" href="#">Navbar scroll</a> -->
+                            <a class="navbar-brand" href="#">
+                                <img src="img/logo.png" alt="Logo"  class="d-inline-block align-text-top">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarScroll">
+                                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Shop</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Pages
+                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Shop Details</a></li>
+                                        <li><a class="dropdown-item" href="#">Shopping Cart</a></li>
+                                        <li><a class="dropdown-item" href="#">Checkout</a></li>
+                                        <li><a class="dropdown-item" href="#">Blog Details</a></li>
+                                    </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="header-main-right">
+                                    <div class="header-cart">
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-heart"></i>
+                                            <span>1</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <i class="fa-solid fa-briefcase"></i>
+                                            <span>3</span>
+                                        </a>
+                                    </div>
+                                    <div class="header-cart-price">
+                                        <p>item:<span class="fw-bold">$150.00</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEADER BOTTOM -->
+    <section class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="sidebar-menu-wrapper">
+                        <div class="siderbar-menu">
+                            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+                            <span class="menu-title">All departments</span>
+                            <span><i class="fa-solid fa-angle-down"></i></span>
+                        </div>
+                        <ul class="list-group d-none">
+                            <li class="list-group-item">Fresh Meat</li>
+                            <li class="list-group-item">Vegetables</li>
+                            <li class="list-group-item">Fruit &amp; Nut Gifts</li>
+                            <li class="list-group-item">Fresh Berries</li>
+                            <li class="list-group-item">Ocean Foods</li>
+                            <li class="list-group-item">Butter &amp; Eggs</li>
+                            <li class="list-group-item">Fastfood</li>
+                            <li class="list-group-item">Fresh Onion</li>
+                            <li class="list-group-item">Papayaya &amp; Crisps</li>
+                            <li class="list-group-item">Oatmeal</li>
+                            <li class="list-group-item">Fresh Bananas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="header-search">
+                    <form action="javascript:void(0)" class="d-flex flex-fill">
+                      <div class="input-group">
+                          <span class="input-group-text">All Categories </span>
+                          <input type="text" aria-label="First name" class="form-control">
+                      </div>
+                      <button class="btn btn-success">Search</button>
+                    </form>
+                    <div class="contact-wrapper">
+                      <div class="contact-icon">
+                        <span>
+                          <i class="fa-solid fa-phone"></i>
+                        </span>
+                      </div>
+                      <div class="contact-info">
+                        <p class="fw-bold">+65 11.188.888</p>
+                        <p>support 24/7 time</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB SECTION -->
+    <section class="breadcrumb">
+        <div class="container-fluid">
+            <div class="breadcrumb-wrapper">
+                <h1 class="breadcrumb-title">Checkout</h1>
+                <h6 class="breadcrumb-link">Home - <span>Checkout</span></h6>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="coupon-link mt-5">
+                        <span><i class="fa-solid fa-tag"></i> Have a coupon? <a href="javascript:void(0)">Click here</a> to enter your code</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="billing">
+                        <h4>Billing Details</h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <form class="mb-5">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="checkout-input">
+                                  <p for="firstName">First Name*</p>
+                                  <input
+                                      type="text"
+                                      class=""
+                                      id="firstName"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="checkout-input">
+                                  <p for="lastName" class="">Last Name*</p>
+                                  <input
+                                      type="text"
+                                      id="lastName"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="checkout-input">
+                                  <p for="Country" class="">Country*</p>
+                                  <input
+                                      type="text"
+                                      id="Country"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="checkout-input">
+                                  <p for="Address" class="">Address*</p>
+                                  <input
+                                      type="text"
+                                      class="mb-3"
+                                      id="Address"
+                                      placeholder="Street Address"
+                                      value=""
+                                      required
+                                  />
+                                  <input
+                                      type="text"
+                                      id="Address"
+                                      placeholder="Apartment, suite, unite ect (optional)"
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="checkout-input">
+                                  <p for="Town" class="">Town/City*</p>
+                                  <input
+                                      type="text"
+                                      id="Town"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="checkout-input">
+                                  <p for="State" class="">Country/State*</p>
+                                  <input
+                                      type="text"
+                                      id="State"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="checkout-input">
+                                  <p for="Postcode" class="">Postcode/ZIP*</p>
+                                  <input
+                                      type="text"
+                                      id="Postcode"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="checkout-input">
+                                  <p for="Phone" class="">Phone/ZIP*</p>
+                                  <input
+                                      type="text"
+                                      id="Phone"
+                                      placeholder=""
+                                      value=""
+                                      required
+                                  />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="checkout-input">
+                                  <p for="email" class="">Email</p>
+                                  <input
+                                      type="email"
+                                      class="form-control"
+                                      id="email"
+                                      placeholder=""
+                                  />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <hr class="my-4" /> -->
+                        <div class="py-4">
+                            <input
+                            type="checkbox"
+                            class=""
+                            />
+                            <label class="" for=""
+                            >Create an account?</label
+                            >
+                        </div>
+
+                        <p class="text-muted">Create an account by entering the information below. If you are a returning customer please login at the top of the page</p>
+
+                        <div class="col-12">
+                            <div class="checkout-input">
+                              <p for="Password" class="">Account Password*</p>
+                              <input
+                                  type="text"
+                                  id="Password"
+                                  placeholder=""
+                                  value=""
+                                  required
+                              />
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <input
+                            type="checkbox"
+                            class=""
+                            />
+                            <label class="" for=""
+                            >Ship to a different address?</label
+                            >
+                        </div>
+                        <div class="col-12">
+                            <div class="checkout-input">
+                              <p for="Note" class="">Order notes*</p>
+                              <input
+                                  type="text"
+                                  id="Note"
+                                  placeholder=""
+                                  value=""
+                                  required
+                              />
+                            </div>
+                        </div>
+
+                        <!-- <hr class="my-4" />
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">
+                            Continue to checkout
+                        </button> -->
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkout-right">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="footer-left">
+              <div class="footer-logo">
+                <img src="img/logo.png" alt="">
+              </div>
+              <div class="footer-info">
+                <p>Address: 60-49 Road 11378 New York </p>
+                <p>Phone: +65 11.188.888</p>
+                <p>Email: hello@colorlib.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-middle">
+              <h6>Useful Links</h6>
+              <div class="footer-links">
+                <ul>
+                  <li><a href="javascript:void(0)">About Us </a></li>
+                  <li><a href="javascript:void(0)">About Our Shop </a></li>
+                  <li><a href="javascript:void(0)">Secure Shopping </a></li>
+                  <li><a href="javascript:void(0)">Delivery infomation </a></li>
+                  <li><a href="javascript:void(0)">Privacy Policy </a></li>
+                  <li><a href="javascript:void(0)">Our Sitemap </a></li>
+                </ul>
+                <ul>
+                  <li><a href="javascript:void(0)">Who We Are </a></li>
+                  <li><a href="javascript:void(0)">Our Services </a></li>
+                  <li><a href="javascript:void(0)">Projects </a></li>
+                  <li><a href="javascript:void(0)">Contact </a></li>
+                  <li><a href="javascript:void(0)">Innovation </a></li>
+                  <li><a href="javascript:void(0)">Testimonials </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-right">
+              <h6>Join Our Newsletter Now</h6>
+              <p>Get E-mail updates about our latest shop and special offers.</p>
+              <form action="javascript:void(0)" class="subscriber-form">
+                <input type="email" placeholder="Enter Your Email">
+                <button>Subscribe</button>
+              </form>
+              <div class="footer-social">
+                <ul>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                  </li>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                  </li>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                  </li>
+                  <li class="social-item">
+                    <span><i class="fa-brands fa-pinterest"></i></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="footer-bottom">
+              <div class="footer-text">
+                Copyright &copy;2025 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="javascript:void(0)">Colorlib</a>
+              </div>
+              <div class="footer-payment">
+                <img src="img/payment-item.png" alt="">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>      
+
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SLICK (SLIDER) -->
+    <script src="plugins/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <!-- OWL CAROUSEL -->
+     <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+      // ------- slick (slider) ------
+      $(function() {
+        $(".regular").slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots:true,
+          arrows:false,
+          autoplay:true,
+          autoplaySpeed: 3000,
+          speed: 2000,
+        });
+      });
+
+      // ---------- owl-carousel ----------
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        // nav: true,
+        dots: false,
+        autoplay: true,
+        smartSpeed: 600,
+      });
+      $('.owl-next').on('click', function() {
+          let currentSlider = $(this).data('target');
+          // alert(currentSlider);
+          $(currentSlider).trigger('next.owl.carousel');
+      })
+      $('.owl-prev').on('click', function() {
+          let currentSlider = $(this).data('target');
+          $(currentSlider).trigger('prev.owl.carousel', [300]);
+      })
+    </script>
+
+  </body>
+</html>
