@@ -72,6 +72,69 @@
           box-shadow: none;
         }
         /* ----------- */
+        /* ----- order ----- */
+        .checkout-order {
+            padding: 2.5rem;
+            background: #f5f5f5;
+        }
+        .checkout-order-title {
+            font-weight: bold;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        .checkout-prodcuts-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .checkout-products {
+            border-bottom: 1px solid #e1e1e1;
+        }
+        .checkout-proudct {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: gray;
+        }
+        .checkout-product-price{
+          font-weight: bold;
+        }
+        .checkout-total-price{
+          color: green;
+        }
+        .checkout-subtotal {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            font-weight: bold;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        .checkout-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        .checkout-checkbox {
+            margin-bottom: 1rem;
+        }
+        .checkout-order-button button {
+            width: 100%;
+            height: 50px;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: bolder;
+            color: white;
+            background: #7fad39;
+            border: none;
+            outline: none;
+            margin-top: .5rem;
+        }
+        /* ----------- */
     </style>
   </head>
   <body>
@@ -435,8 +498,49 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <div class="checkout-right">
-                      
+                    <div class="checkout-order">
+                      <h4 class="checkout-order-title">Your Order</h4>
+                      <div class="checkout-prodcuts-total">
+                        <span>Prodcuts</span>
+                        <span>Total</span>
+                      </div>
+                      <div class="checkout-products">
+                        <div class="checkout-proudct">
+                          <span>Vegetable’s Package</span>
+                          <span class="checkout-product-price">$75.99</span>
+                        </div>
+                        <div class="checkout-proudct">
+                          <span>Fresh Vegetable</span>
+                          <span class="checkout-product-price">$151.99</span>
+                        </div>
+                        <div class="checkout-proudct">
+                          <span>Organic Bananas</span>
+                          <span class="checkout-product-price">$53.99</span>
+                        </div>
+                      </div>
+                      <div class="checkout-subtotal">
+                        <span>Subtotal</span>
+                        <span class="">$750.99</span>
+                      </div>
+                      <div class="checkout-total">
+                        <span>Total</span>
+                        <span class="checkout-total-price">$750.99</span>
+                      </div>
+                      <div class="checkout-checkbox">
+                        <input type="checkbox" name="" id="create-account"> <label for="create-account">Create an account?</label>
+                      </div>
+                      <p class="checkout-order-text">
+                        Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                      <div class="checkout-checkbox">
+                        <input type="checkbox" name="" id="check-payment"> <label for="check-payment">Check Payment</label>
+                      </div>
+                      <div class="checkout-checkbox">
+                        <input type="checkbox" name="" id="paypal"> <label for="paypal">Paypal</label>
+                      </div>
+                      <div class="checkout-order-button">
+                        <button type="submit">Place Order</button>
+                      </div>
                     </div>
                 </div>
             </div>
