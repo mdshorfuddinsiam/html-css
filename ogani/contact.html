@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ogani | Checkout</title>
+    <title>Ogani | Contact</title>
     <!-- CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -29,7 +29,23 @@
     <link rel="stylesheet" href="css/responsive.css" />
 
     <style>
-      
+        .contact-info-section {
+            margin: 60px 0;
+        }
+        .contact-info-widget {
+            text-align: center;
+            line-height: 2.5;
+        }
+        span.contact-info-logo {
+            font-size: 2rem;
+            color: red;
+        }
+        h4.contact-info-title {
+            font-weight: bold;
+        }
+        p.contact-info-subtitle {
+            color: gray;
+        }
     </style>
   </head>
   <body>
@@ -179,12 +195,12 @@
                       <button class="btn btn-success">Search</button>
                     </form>
                     <div class="contact-wrapper">
-                      <div class="contact-icon">
+                      <div class="contact-logo">
                         <span>
                           <i class="fa-solid fa-phone"></i>
                         </span>
                       </div>
-                      <div class="contact-info">
+                      <div class="contact-widget">
                         <p class="fw-bold">+65 11.188.888</p>
                         <p>support 24/7 time</p>
                       </div>
@@ -199,250 +215,60 @@
     <section class="breadcrumb">
         <div class="container-fluid">
             <div class="breadcrumb-wrapper">
-                <h1 class="breadcrumb-title">Checkout</h1>
-                <h6 class="breadcrumb-link">Home - <span>Checkout</span></h6>
+                <h1 class="breadcrumb-title">Contact Us</h1>
+                <h6 class="breadcrumb-link">Home - <span>Contact Us</span></h6>
             </div>
         </div>
     </section>
 
-    <section class="checkout-section">
+    <!-- CONTACT ADDRESS -->
+    <section class="contact-info-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="coupon-link mt-5">
-                        <span><i class="fa-solid fa-tag"></i> Have a coupon? <a href="javascript:void(0)">Click here</a> to enter your code</span>
+                <div class="col-md-3">
+                    <div class="contact-info-widget">
+                        <span class="contact-info-logo">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <h4 class="contact-info-title">Phone</h4>
+                        <p class="contact-info-subtitle">+01-3-8888-6868</p>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="billing">
-                        <h4>Billing Details</h4>
-                        <hr>
+                <div class="col-md-3">
+                    <div class="contact-info-widget">
+                        <span class="contact-info-logo">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <h4 class="contact-info-title">Address</h4>
+                        <p class="contact-info-subtitle">60-49 Road 11378 New York</p>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <form class="mb-5">
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="checkout-input">
-                                  <p for="firstName">First Name*</p>
-                                  <input
-                                      type="text"
-                                      class=""
-                                      id="firstName"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="checkout-input">
-                                  <p for="lastName" class="">Last Name*</p>
-                                  <input
-                                      type="text"
-                                      id="lastName"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="checkout-input">
-                                  <p for="Country" class="">Country*</p>
-                                  <input
-                                      type="text"
-                                      id="Country"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="checkout-input">
-                                  <p for="Address" class="">Address*</p>
-                                  <input
-                                      type="text"
-                                      class="mb-3"
-                                      id="Address"
-                                      placeholder="Street Address"
-                                      value=""
-                                      required
-                                  />
-                                  <input
-                                      type="text"
-                                      id="Address"
-                                      placeholder="Apartment, suite, unite ect (optional)"
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="checkout-input">
-                                  <p for="Town" class="">Town/City*</p>
-                                  <input
-                                      type="text"
-                                      id="Town"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="checkout-input">
-                                  <p for="State" class="">Country/State*</p>
-                                  <input
-                                      type="text"
-                                      id="State"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="checkout-input">
-                                  <p for="Postcode" class="">Postcode/ZIP*</p>
-                                  <input
-                                      type="text"
-                                      id="Postcode"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="checkout-input">
-                                  <p for="Phone" class="">Phone/ZIP*</p>
-                                  <input
-                                      type="text"
-                                      id="Phone"
-                                      placeholder=""
-                                      value=""
-                                      required
-                                  />
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="checkout-input">
-                                  <p for="email" class="">Email</p>
-                                  <input
-                                      type="email"
-                                      class="form-control"
-                                      id="email"
-                                      placeholder=""
-                                  />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <hr class="my-4" /> -->
-                        <div class="py-4">
-                            <input
-                            type="checkbox"
-                            class=""
-                            />
-                            <label class="" for=""
-                            >Create an account?</label
-                            >
-                        </div>
-
-                        <p class="text-muted">Create an account by entering the information below. If you are a returning customer please login at the top of the page</p>
-
-                        <div class="col-12">
-                            <div class="checkout-input">
-                              <p for="Password" class="">Account Password*</p>
-                              <input
-                                  type="text"
-                                  id="Password"
-                                  placeholder=""
-                                  value=""
-                                  required
-                              />
-                            </div>
-                        </div>
-                        <div class="py-4">
-                            <input
-                            type="checkbox"
-                            class=""
-                            />
-                            <label class="" for=""
-                            >Ship to a different address?</label
-                            >
-                        </div>
-                        <div class="col-12">
-                            <div class="checkout-input">
-                              <p for="Note" class="">Order notes*</p>
-                              <input
-                                  type="text"
-                                  id="Note"
-                                  placeholder=""
-                                  value=""
-                                  required
-                              />
-                            </div>
-                        </div>
-
-                        <!-- <hr class="my-4" />
-                        <button class="w-100 btn btn-primary btn-lg" type="submit">
-                            Continue to checkout
-                        </button> -->
-                    </form>
+                <div class="col-md-3">
+                    <div class="contact-info-widget">
+                        <span class="contact-info-logo">
+                            <i class="fa-regular fa-clock"></i>
+                        </span>
+                        <h4 class="contact-info-title">Open time</h4>
+                        <p class="contact-info-subtitle">10:00 am to 23:00 pm</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="checkout-order">
-                      <h4 class="checkout-order-title">Your Order</h4>
-                      <div class="checkout-prodcuts-total">
-                        <span>Prodcuts</span>
-                        <span>Total</span>
-                      </div>
-                      <div class="checkout-products">
-                        <div class="checkout-proudct">
-                          <span>Vegetable’s Package</span>
-                          <span class="checkout-product-price">$75.99</span>
-                        </div>
-                        <div class="checkout-proudct">
-                          <span>Fresh Vegetable</span>
-                          <span class="checkout-product-price">$151.99</span>
-                        </div>
-                        <div class="checkout-proudct">
-                          <span>Organic Bananas</span>
-                          <span class="checkout-product-price">$53.99</span>
-                        </div>
-                      </div>
-                      <div class="checkout-subtotal">
-                        <span>Subtotal</span>
-                        <span class="">$750.99</span>
-                      </div>
-                      <div class="checkout-total">
-                        <span>Total</span>
-                        <span class="checkout-total-price">$750.99</span>
-                      </div>
-                      <div class="checkout-checkbox">
-                        <input type="checkbox" name="" id="create-account"> <label for="create-account">Create an account?</label>
-                      </div>
-                      <p class="checkout-order-text">
-                        Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <div class="checkout-checkbox">
-                        <input type="checkbox" name="" id="check-payment"> <label for="check-payment">Check Payment</label>
-                      </div>
-                      <div class="checkout-checkbox">
-                        <input type="checkbox" name="" id="paypal"> <label for="paypal">Paypal</label>
-                      </div>
-                      <div class="checkout-order-button">
-                        <button type="submit">Place Order</button>
-                      </div>
+                <div class="col-md-3">
+                    <div class="contact-info-widget">
+                        <span class="contact-info-logo">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+                        <h4 class="contact-info-title">Email</h4>
+                        <p class="contact-info-subtitle">hello@colorlib.com</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-
+    <!-- CONTACT MAP -->
+     <section class="contact-map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3819.2516949280794!2d90.42532263886741!3d23.74558276492775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDQ0JzQ0LjEiTiA5MMKwMjUnNDAuNSJF!5e0!3m2!1sen!2sbd!4v1768245002348!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </section>
 
     <!-- FOOTER -->
     <section class="footer">
