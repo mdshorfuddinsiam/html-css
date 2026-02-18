@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Developer</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn-primary{
+            padding: 18px 36px;
+            background-color: #FD6E0A;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        .btn-outline{
+            padding: 18px 36px;
+            color: #FD6E0A;
+            background-color: white;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid #FD6E0A;
+        }
+
+        /* ------ navbar ------- */
+        header{
+            background-image: url('images/developer.png'), url('images/header_bg.png');
+            background-repeat: no-repeat;
+            background-position: left, bottom right;
+            background-color: #FFF8F3;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 200px;
+        }
+        .navbar ul{
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        .navbar ul li{
+            list-style: none;
+            font-size: 20px;
+        }
+        #navbar-title{
+            color: #FD6E0A;
+        }
+
+        /* --------- banner --------- */
+        .banner-section{
+            display: flex;
+            justify-content: space-between;
+            gap: 10rem;
+            margin: 0 35px 0 200px;
+        }
+        .banner-container{
+            display: flex;
+            align-items: center;
+        }
+        .banner-content{
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .banner-greetings{
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        .banner-title{
+            font-size: 5rem;
+            font-weight: bold;
+        }
+        .banner-description{
+            font-size: 1.25rem;
+            color: #FD6E0A;
+        }
+        .banner-buttons{
+            display: flex;
+            gap: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <h1>Ma<span id="navbar-title">r</span>y</h1>
+            <ul>
+                <li>Portfolio</li>
+                <li>Blog</li>
+                <li>
+                    <button class="btn-primary">
+                        Hire Me
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-container">
+                <div class="banner-content">
+                    <h2 class="banner-greetings">Hi, I am</h2>
+                    <h1 class="banner-title">Mary Hardy</h1>
+                    <p class="banner-description">Shot what able cold new see hold.Friendly as an betrayed formerly he. Morning because as to society behaved moments.</p>
+                    <div class="banner-buttons">
+                        <button class="btn-primary"><i class="fa-solid fa-download"></i> Downlaod CV</button>
+                        <button class="btn-outline"><i class="fa-solid fa-phone"></i> Contact</button>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-image">
+                <img src="images/hardy.png" alt="">
+            </div>
+        </section>
+    </header>
+    <!-- Main Section -->
+    <!-- Footer Section -->
+    
+</body>
+</html>
