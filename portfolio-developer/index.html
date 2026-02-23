@@ -7,271 +7,102 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .btn-primary{
-            padding: 18px 36px;
-            background-color: #FD6E0A;
-            color: white;
-            font-weight: 700;
-            font-size: 20px;
-            border-radius: 5px;
-            border: none;
-        }
-        .btn-outline{
-            padding: 18px 36px;
-            color: #FD6E0A;
-            background-color: white;
-            font-weight: 700;
-            font-size: 20px;
-            border-radius: 5px;
-            border: 1px solid #FD6E0A;
-        }
-
-        .bg-primary{
-            background-color: #FFF8F3;
-        }
-
-        .section-title{
-            font-size: 35px;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        .dark-3{
-            color: #757575;
-        }
-
-        .text-center{
-            text-align: center;
-        }
-
-        p{
-            line-height: 1.5;
-        }
-        /* -------- common --------- */
-        .about-description, .services-description{
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        /* ------ navbar ------- */
-        header{
-            background-image: url('images/developer.png'), url('images/header_bg.png');
-            background-repeat: no-repeat;
-            /* background-position: left, bottom right; */
-            background-position: 2rem, bottom right;
-        }
-        .navbar{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding : 2rem 200px;
-        }
-        .navbar ul{
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-        }
-        .navbar ul li{
-            list-style: none;
-            font-size: 20px;
-        }
-        #navbar-title{
-            color: #FD6E0A;
-        }
-
-        /* --------- banner --------- */
-        .banner-section{
-            display: flex;
-            justify-content: space-between;
-            gap: 10rem;
-            margin: 0 35px 0 200px;
-        }
-        .banner-container{
-            display: flex;
-            align-items: center;
-        }
-        .banner-content{
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-        .banner-greetings{
-            font-size: 2.5rem;
-            font-weight: 500;
-        }
-        .banner-title{
-            font-size: 5rem;
-            font-weight: bold;
-        }
-        .banner-description{
-            font-size: 1.25rem;
-            color: #FD6E0A;
-        }
-        .banner-buttons{
-            display: flex;
-            gap: 2rem;
-        }
-
-        /* ------- Main Section ------ */
-        /* main {
-            padding: 0 200px;
-        } */
-        /* main > section {
-            padding: 130px 200px;
-        } */
-        section.about {
-            padding: 130px 200px;
-        }
-        .about-container{
-            padding: 130px 150px;
-        }
-        .about-content{
-            border: 2px solid gray;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            background-color: #FFFFFF;
-        }
-        .about-infos{
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-        }
-        .about-info{
-            font-size: 20px;
-        }
-        /* -------- Services Section ------- */
-        .services{
-            padding: 0 200px; 
-        }
-        .services-container{
-            text-align: center;
-        }
-        .services-description{
-            padding-right: 150px;
-            padding-left: 150px;
-        }
-        .services-content{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        /* .services-content{
-            display: flex;
-            gap: 1.5rem;
-        } */
-        .service-card{
-            padding: 30px;
-            background-color: white;
-            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.06);
-            text-align: left;
-        }
-        .service-img{
-            width: 45px;
-            margin-bottom: 30px;
-        }
-        .service-img img{
-            width: 100%;
-        }
-        .service-title{
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .service-description{
-            font-size: 16px;
-        }
-        /* -------- Resume Section --------- */
-        .my-resume {
-            padding: 130px 200px 115px 200px;
-        }
-        .my-resume-title{
-            font-size: 35px;
-            font-weight: bold;
-            margin-bottom: 110px;
-            text-align: center;
-        }
-        .resume-main-container{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-        .resume-title{
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .resume{
-            margin: 30px 5rem 30px 0;
-        }
-        .resume-designation{
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 17px;
-        }
-        .resume-varsity{
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        .resume-description{
-            font-size: 16px;
-        }
-        .my-resume-button{
-            text-align: center;
-            margin-top: 50px;
-        }
-        /* -------- footer -------- */
-        .footer{
-            padding: 130px 200px;
-        }
-        .footer-container{
-            display: flex;
-            gap: 120px;
-        }
-        .footer-left{
-            flex-basis: 50%;
-        }
-        .footer-right{
-            flex-basis: 50%;
-        }
-        .footer-title{
-            font-size: 35px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .footer-form{
-            display: flex;
-            flex-direction: column;
-        }
-        input[type="text"], input[type="email"], textarea{
-            padding: 18px 30px;
-            margin-bottom: 1.5rem;
-            border: none;
-            outline: none;
-        }
-        .footer-description{
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-        .footer-icons i{
-            margin-right: 1rem;
-            color: #FD6E0A;
-        }
 
         /* ------ Responsive ------ */
         @media screen and (max-width: 575px){
+            .btn-primary {
+                padding: .75rem 1rem;
+                font-size: 16px;
+            }
+            .btn-outline {
+                padding: .75rem 1rem;
+                font-size: 16px;
+            }
+            /* ------ header ------ */
             .navbar{
                 flex-direction: column;
+                gap: 1rem;
+                padding : 2rem 1.5rem;
             }
             .banner-section{
                 flex-direction: column;
+                margin: 1rem;
+                gap: .50rem;
+            }
+            .banner-title {
+                font-size: 3rem;
+            }
+            .banner-greetings {
+                font-size: 2rem;
+            }
+            .banner-image{
+                margin: 1rem;
+            }
+            .banner-image img{
+                width: 100%;
+            }
+            .banner-buttons {
+                gap: 1rem;
+            }
+            .banner-content {
+                gap: 1rem;
+            }
+            /* ------ about ------ */
+            .about{
+                padding: 2rem 1.5rem;
+            }
+            .about-container{
+                padding: 1rem;
+            }
+            .about-infos{
+                flex-direction: column;
+                gap: 1rem;
+            }
+            /* ------ services ------ */
+            .services{
+                padding: 0 2.5rem;
+            }
+            .services-description{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+            .services-content{
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+            }
+            /* ------ resume ------ */
+            .my-resume {
+                padding: 2rem 1.5rem 1.75rem;
+            }
+            .my-resume-title{
+                margin-bottom: 2rem;
+            }
+            .resume-main-container{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+            }
+            .my-resume-button{
+                margin-top: 1rem;
+            }
+            /* ------ footer ------ */
+            .footer{
+                padding: 2rem 1.5rem;
+            }
+            .footer-container{
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .footer-title{
+                margin-bottom: .50rem;
+            }
+            .footer-description{
+                margin-bottom: 1rem;
+                font-size: 16px;
             }
         }
         
