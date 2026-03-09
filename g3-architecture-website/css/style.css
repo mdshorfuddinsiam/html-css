@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ========== Commom ========= */
+.common-btn {
+    padding: 1.25rem 1.5rem;
+    background-color: #FF900E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: .5rem;
+}
+
+.dark-3{
+    color: #727272;
+}
+
+.header-wrapper, main{
+    /* max-width: 1440px; */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.description{
+    margin: 1.5rem 0;
+    line-height: 26px;
+}
+/* =========================== */
+
+/* ======= Header ======== */
+.header{
+    background-color: rgba(255, 144, 14, 0.1);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+}
+nav ul{
+    display: flex;
+    gap: 3rem;
+}
+nav li{
+    list-style: none;
+}
+
+/* ---------- banner ---------- */
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+}
+.banner-title{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+.banner-description{
+    width: 70%;
+    text-align: center;
+    margin: 2rem 0;
+    line-height: 26px;
+}
+.banner-img{
+    margin: 3rem 0;
+}
+.banner-img img{
+    width: 100%;
+}
+/* ---------------------------- */
+/* ======================== */
+
+/* ============ Main ============ */
+/* -------- Features -------- */
+.features{
+    display: flex;
+    gap: 4rem;
+    margin: 5rem 4rem;
+}
+.team-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.feature-title{
+    font-size: 3rem;
+}
+.feature-title-1{
+    font-weight: light;
+}
+.feature-title-2{
+    font-weight: bold;
+}
+.feature-title-3{
+    font-weight: bold;
+    color: #FF900E;
+}
+.features-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* -------------------------- */
+/* ======================== */
